@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WordLex"
         mc:Ignorable="d"
-        Title="MainWindow" Height="497.304" Width="525" SizeChanged="Window_SizeChanged">
+        Title="WordLex - www.aju.ro" Height="497.304" Width="525" SizeChanged="Window_SizeChanged">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -35,12 +35,19 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="6" Background="#EEEEEE" Foreground="Silver" x:Name="labelColor" HorizontalContentAlignment="Center"  HorizontalAlignment="Stretch"  />
             <Label Grid.Column="0" Grid.Row="0" Foreground="Red" x:Name="labelWordsBads" HorizontalContentAlignment="Right" Content="21" />
             <Label Grid.Column="1" Grid.Row="0" Foreground="Green" x:Name="labelWordsGoods" HorizontalContentAlignment="Left" Content="16" />
             <Label Grid.Column="4" Grid.Row="0" Foreground="Silver" x:Name="labelLeft" HorizontalContentAlignment="Right" Content="Words left:" />
             <Label Grid.Column="5" Grid.Row="0" Foreground="Blue" x:Name="labelWordsLeft" HorizontalContentAlignment="Left" Content="288" />
+            <Label Grid.Column="0" Grid.Row="1" Foreground="Silver" x:Name="labelLevelText" HorizontalContentAlignment="Right" Content="Level:" />
+            <Label Grid.Column="1" Grid.Row="1" Foreground="Silver" x:Name="labelLevelUp" HorizontalContentAlignment="Left" Margin="0, 0, 0, 0" Content="Up" MouseDoubleClick="level_up" />
+            <Label Grid.Column="1" Grid.Row="1" Foreground="Black" x:Name="labelLevel" HorizontalContentAlignment="Left" Margin="20, 0, 0, 0" Content="0" />
+            <Label Grid.Column="1" Grid.Row="1" Foreground="Silver" x:Name="labelLevelDown" HorizontalContentAlignment="Left" Margin="30, 0, 0, 0" Content="Dn" MouseDoubleClick="level_down" />
+            <Label Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Foreground="Silver" x:Name="labelNews" MouseDoubleClick="labelNews_ReverseDictionaryDirection" HorizontalContentAlignment="Center"  HorizontalAlignment="Stretch" Content="Wellcome to WordLex!" />
+        
         </Grid>
-        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  x:Name="labelWordToFind" Content="Word to find" FontWeight="Bold"/>
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" MouseDoubleClick="labelWordToFind_MouseDoubleClick" VerticalContentAlignment="Center"  x:Name="labelWordToFind" Content="Word to find" FontWeight="Bold"/>
         <Button Grid.Row="2" Grid.Column="1" x:Name="button1" Content="Button" Click="button1_Click"/>
         <Button Grid.Row="3" Grid.Column="1" x:Name="button2" Content="Button" Click="button2_Click"/>
         <Button Grid.Row="4" Grid.Column="1" x:Name="button3" Content="Button" Click="button3_Click"/>
