@@ -1,0 +1,52 @@
+﻿<Window x:Class="WordLex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WordLex"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="497.304" Width="525" SizeChanged="Window_SizeChanged">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Foreground="Red" x:Name="labelWordsBads" HorizontalContentAlignment="Right" Content="21" />
+            <Label Grid.Column="1" Grid.Row="0" Foreground="Green" x:Name="labelWordsGoods" HorizontalContentAlignment="Left" Content="16" />
+            <Label Grid.Column="4" Grid.Row="0" Foreground="Silver" x:Name="labelLeft" HorizontalContentAlignment="Right" Content="Words left:" />
+            <Label Grid.Column="5" Grid.Row="0" Foreground="Blue" x:Name="labelWordsLeft" HorizontalContentAlignment="Left" Content="288" />
+        </Grid>
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  x:Name="labelWordToFind" Content="Word to find" FontWeight="Bold"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="button1" Content="Button" Click="button1_Click"/>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="button2" Content="Button" Click="button2_Click"/>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="button3" Content="Button" Click="button3_Click"/>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="button4" Content="Button" Click="button4_Click"/>
+        <Button Grid.Row="6" Grid.Column="1" x:Name="button5" Content="Button" Click="button5_Click"/>
+        <Label Grid.Row="7" Grid.Column="1" Foreground="Silver" x:Name="labelLastPair" HorizontalContentAlignment="Center" Content="Last Revealed" />
+
+    </Grid>
+</Window>
